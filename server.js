@@ -18,7 +18,10 @@ app.use(session({
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static(path.join(__dirname, "views")))
 
-mongoose.connect(process.env.MONOGO_URL).then(()=>{
+mongoose.connect(process.env.MONOGO_URL,{
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+}).then(()=>{
   console.log("mongodb connected")
 }).catch(error=> console.log(error))
 
