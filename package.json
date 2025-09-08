@@ -6,6 +6,7 @@
     "express": "^5.1.0",
     "express-session": "^1.18.2",
     "mongoose": "^8.18.0",
+    "nodemailer": "^7.0.6",
     "session": "^0.1.0"
   },
   "name": "project",
